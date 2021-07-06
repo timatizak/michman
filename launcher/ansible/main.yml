@@ -47,6 +47,42 @@
       include_role:
         name: mountnfs
       when: mountnfs is defined and mountnfs
+    - import_role:
+        name: kubespray-defaults
+      when: deploy_kubernetes is defined and deploy_kubernetes
+    - include_role:
+        name: bootstrap-os
+      when: deploy_kubernetes is defined and deploy_kubernetes
+    - include_role:
+        name: preinstall
+      when: deploy_kubernetes is defined and deploy_kubernetes
+    - include_role:
+        name: container-engine
+      when: deploy_kubernetes is defined and deploy_kubernetes
+    - include_role:
+        name: download
+      when: deploy_kubernetes is defined and deploy_kubernetes
+    - include_role:
+        name: etcd
+      when: deploy_kubernetes is defined and deploy_kubernetes
+    - include_role:
+        name: node
+      when: deploy_kubernetes is defined and deploy_kubernetes
+    - include_role:
+        name: control-plane
+      when: deploy_kubernetes is defined and deploy_kubernetes and inventory_hostname in groups[cluster_name + '_master'][0]
+    - include_role:
+        name: client
+      when: deploy_kubernetes is defined and deploy_kubernetes and inventory_hostname in groups[cluster_name + '_master'][0]
+    - include_role:
+        name: kubeadm
+      when: deploy_kubernetes is defined and deploy_kubernetes
+    - include_role:
+        name: node-label
+      when: deploy_kubernetes is defined and deploy_kubernetes
+    - include_role:
+        name: network_plugin
+      when: deploy_kubernetes is defined and deploy_kubernetes
 
 - hosts: "{{ cluster_name }}_master"
   tasks:

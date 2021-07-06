@@ -1,0 +1,6 @@
+---
+dependencies:
+  - role: container-engine/docker
+    tags:
+      - container-engine
+      - docker

@@ -1,0 +1,95 @@
+---
+docker_version: '19.03'
+docker_cli_version: "{{ docker_version }}"
+
+docker_package_info:
+  pkgs:
+
+docker_repo_key_info:
+  repo_keys:
+
+docker_repo_info:
+  repos:
+
+docker_cgroup_driver: systemd
+
+docker_dns_servers_strict: true
+
+docker_container_storage_setup: false
+
+yum_repo_dir: /etc/yum.repos.d
+
+# Fedora docker-ce repo
+docker_fedora_repo_base_url: 'https://download.docker.com/linux/fedora/{{ ansible_distribution_major_version }}/$basearch/stable'
+docker_fedora_repo_gpgkey: 'https://download.docker.com/linux/fedora/gpg'
+# CentOS/RedHat docker-ce repo
+docker_rh_repo_base_url: 'https://download.docker.com/linux/centos/{{ ansible_distribution_major_version }}/$basearch/stable'
+docker_rh_repo_gpgkey: 'https://download.docker.com/linux/centos/gpg'
+# Ubuntu docker-ce repo
+docker_ubuntu_repo_base_url: "https://download.docker.com/linux/ubuntu"
+docker_ubuntu_repo_gpgkey: 'https://download.docker.com/linux/ubuntu/gpg'
+docker_ubuntu_repo_repokey: '9DC858229FC7DD38854AE2D88D81803C0EBFCD88'
+# Debian docker-ce repo
+docker_debian_repo_base_url: "https://download.docker.com/linux/debian"
+docker_debian_repo_gpgkey: 'https://download.docker.com/linux/debian/gpg'
+docker_debian_repo_repokey: '9DC858229FC7DD38854AE2D88D81803C0EBFCD88'
+docker_bin_dir: "/usr/bin"
+
+# flag to enable/disable docker cleanup
+docker_orphan_clean_up: false
+
+# old docker package names to be removed
+docker_remove_packages_yum:
+  - docker
+  - docker-common
+  - docker-engine
+  - docker-selinux.noarch
+  - docker-client
+  - docker-client-latest
+  - docker-latest
+  - docker-latest-logrotate
+  - docker-logrotate
+  - docker-engine-selinux.noarch
+
+docker_remove_packages_apt:
+  - docker
+  - docker-engine
+  - docker.io
+
+docker_plugins: []
+docker_insecure_registries: []
+docker_registry_mirrors: []
+docker_daemon_graph: "/var/lib/docker"
+docker_iptables_enabled: "false"
+docker_log_opts: "--log-opt max-size=50m --log-opt max-file=5"
+
+# Should be set to a cluster IP if using a custom cluster DNS
+manual_dns_server: ""
+
+# Can be docker_dns, host_resolvconf or none
+resolvconf_mode: docker_dns
+# Deploy netchecker app to verify DNS resolve as an HTTP service
+deploy_netchecker: false
+# Ip address of the kubernetes DNS service (called skydns for historical reasons)
+skydns_server: "{{ kube_service_addresses|ipaddr('net')|ipaddr(3)|ipaddr('address') }}"
+skydns_server_secondary: "{{ kube_service_addresses|ipaddr('net')|ipaddr(4)|ipaddr('address') }}"
+dns_domain: "{{ cluster_name }}"
+docker_dns_search_domains:
+- 'default.svc.{{ dns_domain }}'
+- 'svc.{{ dns_domain }}'
+
+kube_dns_servers:
+  coredns: ["{{skydns_server}}"]
+  coredns_dual: "{{[skydns_server] + [ skydns_server_secondary ]}}"
+  manual: ["{{manual_dns_server}}"]
+
+dns_servers: "{{kube_dns_servers[dns_mode]}}"
+kube_service_addresses: 10.233.0.0/18
+kube_service_addresses_ipv6: fd85:ee78:d8a6:8607::1000/116
+
+ndots: 2
+docker_dns_options:
+- ndots:{{ ndots }}
+- timeout:2
+- attempts:2
+dns_mode: coredns

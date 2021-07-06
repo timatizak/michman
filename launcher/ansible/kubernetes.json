@@ -1,0 +1,586 @@
+{
+  "Type": "kubernetes",
+  "Description": "Kubernetes service",
+  "Versions": [
+    {
+      "Version": "v1.19.0",
+      "Description": "Kubernetes version 1.19.0",
+      "Configs": [
+	{
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+	    "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.19.0",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.19.0",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.19.1",
+      "Description": "Kubernetes version 1.19.1",
+      "Configs": [
+	{
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.19.1",
+          "AnsibleVarName": "kube_network_plugin"
+	},
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.19.1",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.19.2",
+      "Description": "Kubernetes version 1.19.2",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.19.2",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.19.2",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.19.3",
+      "Description": "Kubernetes version 1.19.3",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.19.3",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.19.3",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.19.4",
+      "Description": "Kubernetes version 1.19.4",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.19.4",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.19.4",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.19.5",
+      "Description": "Kubernetes version 1.19.5",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.19.5",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.19.5",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.19.6",
+      "Description": "Kubernetes version 1.19.6",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.19.6",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.19.6",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.19.7",
+      "Description": "Kubernetes version 1.19.7",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.19.7",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.19.7",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.19.8",
+      "Description": "Kubernetes version 1.19.8",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.19.8",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.19.8",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.19.9",
+      "Description": "Kubernetes version 1.19.9",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.19.9",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.19.9",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        },
+        {
+          "ParameterName": "ubuntu_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_ubuntu_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.19.10",
+      "Description": "Kubernetes version 1.19.10",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.19.10",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.19.10",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.20.0",
+      "Description": "Kubernetes version 1.20.0",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.20.0",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.20.0",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.20.1",
+      "Description": "Kubernetes version 1.20.1",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.20.1",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.20.1",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.20.2",
+      "Description": "Kubernetes version 1.20.2",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.20.2",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.20.2",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.20.3",
+      "Description": "Kubernetes version 1.20.3",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.20.3",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.20.3",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    },
+    {
+      "Version": "v1.20.4",
+      "Description": "Kubernetes version 1.20.4",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.20.4",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.20.4",
+          "AnsibleVarName": "kubernetes_offline"
+        }
+      ]
+    },
+    {
+      "Version": "v1.20.5",
+      "Description": "Kubernetes version 1.20.5",
+      "Configs": [
+        {
+          "ParameterName": "network plugin",
+          "Type": "string",
+          "PossibleValues": [
+            "calico",
+            "flannel",
+            "weave"
+          ],
+          "DefaultValue": "calico",
+          "Description": "netwrok plugin for kubernetes v1.20.5",
+          "AnsibleVarName": "kube_network_plugin"
+        },
+	{
+          "ParameterName": "offline",
+          "Type": "bool",
+          "PossibleValues": [
+            "true",
+            "false"
+          ],
+          "DefaultValue": "false",
+          "Description": "offline deploy for kubernetes v1.20.5",
+          "AnsibleVarName": "kubernetes_offline"
+        },
+        {
+          "ParameterName": "files_repo",
+          "Type": "string",
+          "AnsibleVarName": "kubernetes_files_repo"
+        }
+      ]
+    }
+  ],
+  "DefaultVersion": "v1.20.5",
+  "Class": "master-slave"
+}
